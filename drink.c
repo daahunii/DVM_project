@@ -60,23 +60,15 @@ int createDrink(Drink *p){
 }; // 음료를 추가하는 함수
 
 void readDrink(Drink p){
-	printf("음료명 : %s\n", p.name); 
-	printf("음료 브랜드 : %s\n", p.company); 
-	printf("가격 : %d\n", p.price);
-	if(p.type == 1)
-		printf("음료 종류 : 이온음료\n"); 
-	else if(p.type ==2)
-		printf("음료 종류 : 탄산음료\n");
-	else if(p.type ==3)
-		printf("음료 종류 : 과일맛 음료\n");
-	else if(p.type ==4)
-		printf("음료 종류 : 우유 음료\n");
+	printf(" %-8s %-5s %-5d %-2d\n", p.name, p.company, p.price, p.type);
 }; // 하나의 음료 출력 함수
 
 void listDrink(Drink *p, int count){
+	printf("No    Name    company   price  type\n");
+	printf("======================================\n");
 	for(int i=0; i<count; i++){
 		if(p->price == -1 || p->type == -1) continue;
-		printf("%-2d", i+1);
+		printf("%-2d ", i+1);
 		readDrink(*p);
 		printf("\n");
 	}
