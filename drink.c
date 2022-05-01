@@ -1,5 +1,3 @@
-//22100661 정다훈
-/* manager.c */
 #include <stdio.h>
 #include <string.h>
 #include "drink.h"
