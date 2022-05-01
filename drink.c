@@ -15,7 +15,7 @@ int selectMenu(){
 	printf("7. 음료 가격대 검색\n");
 	printf("8. 음료 종류 검색\n");
 	printf("0. 종료\n\n");
-	printf("입력 : ");
+	printf("=> 원하는 메뉴는? : ");
         scanf("%d", &menu);
         printf("\n");
        return menu;
