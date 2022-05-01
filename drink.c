@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <drink.h>
+#include "drink.h"
 
 int selectMenu(){
 	int menu;
