@@ -60,12 +60,12 @@ int createDrink(Drink *p){
 }; // 음료를 추가하는 함수
 
 void readDrink(Drink p){
-	printf(" %-8s %-5s %-5d %-2d\n", p.name, p.company, p.price, p.type);
+	printf(" %-8s %-8s %-7d %-2d\n", p.name, p.company, p.price, p.type);
 }; // 하나의 음료 출력 함수
 
 void listDrink(Drink *p, int count){
-	printf("No    Name    company   price  type\n");
-	printf("======================================\n");
+	printf("No    Name   brand  price type\n");
+	printf("===================================\n");
 	for(int i=0; i<count; i++){
 		if(p->price == -1 || p->type == -1) continue;
 		printf("%-2d ", i+1);
@@ -85,7 +85,7 @@ int updateDrink(Drink *p){
 	getchar();
 	scanf("%[^\n]", p->company);
 	printf("가격 : ");
-	scanf("%d", p->price);
+	scanf("%d", &p->price);
 	printf("음료 종류 (1: 이온, 2: 탄산, 3: 과일, 4: 우유) : ");
 	scanf("%d", &p->type);
 
@@ -126,7 +126,7 @@ void searchDrink(Drink *p, int count){
 		if(p->price==-1 || p->type ==-1) continue;
 		if(strstr(p->name,search)){
 			printf("%-2d", i+1);
-			readProduct(*p);
+			readDrink(*p);
 			printf("\n");
 			scnt++;
 		}
@@ -145,30 +145,30 @@ void searchPrice(Drink *p, int count){
        for(int i=0; i<count; i++){
              if(p->price==-1 || p->type==-1) continue;
              if(search==0){
-                    if(p[i]->price<1000){
+                    if(p->price<1000){
                            printf("%-2d ", i+1);
-                           readProduct(*p);
+                           readDrink(*p);
                            printf("\n");
                            scnt++;
                     }
              }else if(search==1){
-		    if(p[i]->price >= 1000 && p[i]->price<2000){ 
+		    if(p->price >= 1000 && p->price<2000){ 
 			   printf("%-2d ", i+1);
-                           readProduct(*p);
+                           readDrink(*p);
                            printf("\n");
                            scnt++;
                     }
              }else if(search==2){
-		    if(p[i]->price>=2000 && p[i]->price<3000){ 
+		    if(p->price>=2000 && p->price<3000){ 
 			   printf("%-2d ", i+1);
-                           readProduct(*p);
+                           readDrink(*p);
                            printf("\n");
                            scnt++;
                     }
              }else if(search==3){
-                    if(p[i]->price>=3000){
+                    if(p->price>=3000){
                            printf("%-2d ", i+1);
-                           readProduct(*p);
+                           readDrink(*p);
                            printf("\n");
                            scnt++;
 		} 
@@ -183,13 +183,13 @@ void searchType(Drink *p, int count){
         int scnt=0;
 
         printf("\n검색할 음료 종류? ( 1: 이온, 2: 탄산, 3: 과일, 4: 우유)\n");
-        scanf("%d", search);
+        scanf("%d", &search);
 
         for(int i=0; i<count; i++){
                 if(p->price==-1 || p->type ==-1) continue;
                 if(p->type==search){
                         printf("%-2d", i+1);
-                        readProduct(*p);
+                        readDrink(*p);
                         printf("\n");
                         scnt++;
                 }

@@ -15,4 +15,4 @@ void saveDrink(Drink *p, int count); // 음료 정보 저장
 int updateDrink(Drink *p); // 음료 정보 수정
 void searchDrink(Drink *p, int count); // 음료 이름 검색
 void searchPrice(Drink *p, int count); // 음료 가격 검색
-void searchType(Drink *p, int count); // 회사명 검색
+void searchType(Drink *p, int count); // 음료 유형 검색
