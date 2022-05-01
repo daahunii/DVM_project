@@ -1,8 +1,34 @@
 # DVM_project
 
-- mini project 주제
-- mini project 에 대한 소개
-- image(pixabay 등 무료 이미지 활용)
-- mini project 가 가지고 있는 대략적인 기능 설명
-- 개발환경 및 언어
-- 팀소개 및 팀원이 맡은 역할
+![DVM](https://user-images.githubusercontent.com/86994067/166147082-9f983d8c-99c1-42c1-a338-458a8652729d.png)
+
+세상의 맛있는 음료를 제공해주는 곳!
+
+목이 마르신가요?
+목마르고 원하는 음료를 즐기고 싶을 땐 **Drink VM**
+
+목차
+
+0. [Home](https://github.com/daahunii/DVM_project/wiki)
+
+1. 서비스
+
+> * [서비스 상세](https://github.com/daahunii/DVM_project/wiki/서비스-상세)
+> * [기술 상세](https://github.com/daahunii/DVM_project/wiki/기술-상세)
+
+2. 디자인
+
+> * [BI](https://github.com/daahunii/DVM_project/wiki/BI)
+> * [UI / UX](https://github.com/daahunii/DVM_project/wiki/UI-UX)
+
+3. 협업
+
+> * [개발일지](https://github.com/daahunii/DVM_project/wiki/개발일지)
+> * [프로젝트 참여자](https://github.com/daahunii/DVM_project/wiki/프로젝트-참여자)
+
+4. 회고
+
+**Who Are We**
+
+* 정다훈 (daahunii)
+* 정승욱 (swjung0826)
