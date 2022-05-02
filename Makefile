@@ -1,5 +1,4 @@
 CC = gcc
-CFLAGS = -W Wall
 
 manager.o: drink.c drink.h
 	$(CC) -c drink.c -o drink.o
