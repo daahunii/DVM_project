@@ -26,7 +26,14 @@
 > * [개발일지](https://github.com/daahunii/DVM_project/wiki/개발일지)
 > * [프로젝트 참여자](https://github.com/daahunii/DVM_project/wiki/프로젝트-참여자)
 
-4. 회고
+4. 기능
+> * 음료 목록 _**조회,추가,삭제,수정**_  기능
+> * 음료 목록 _**저장 및 불러오기**_  기능
+> * 음료 검색 기능 _**(이름,가격대,종류)**_
+
+5. 개발환경 및 언어
+> * C
+> * Github, Linux 
 
 **Who Are We**
 
