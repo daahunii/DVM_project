@@ -67,7 +67,7 @@ void listDrink(Drink *p, int count){
 	printf("No    Name   brand  price type\n");
 	printf("===================================\n");
 	for(int i=0; i<count; i++){
-		if(p->price == -1 || p->type == -1) continue;
+		if(p[i].price == -1 || p[i].type == -1) continue;
 		printf("%-2d ", i+1);
 		readDrink(p[i]);
 	}
@@ -103,9 +103,9 @@ void saveDrink(Drink *p, int count){
 	fp=fopen("drink.txt", "w");
 
 	for(int i=0; i<count; i++){
-		if(p->price==-1 || p->type==-1) break;
+		if(p[i].price==-1 || p[i].type==-1) break;
 
-		fprintf(fp, "%d %d %s\n%s\n", p->price, p->type, p->name, p->company);
+		fprintf(fp, "%d %d %s\n%s\n", p[i].price, p[i].type, p[i].name, p[i].company);
 	}
 	fclose(fp);
 	printf("=>저장완료!\n");
@@ -119,14 +119,14 @@ void searchDrink(Drink *p, int count){
 	scanf("%[^\n]", search);
 
 	for(int i=0; i<count; i++){
-		if(p->price==-1 || p->type ==-1) continue;
-		if(strstr(p->name,search)){
+		if(p[i].price==-1 || p[i].type ==-1) continue;
+		if(strstr(p[i].name,search)){
 			printf("%-2d", i+1);
-			readDrink(*p);
-			printf("\n");
+			readDrink(p[i]);
 			scnt++;
 		}
 	}
+	printf("\n");
 	if(scnt==0) printf("\n=> 검색된 데이터 없음!\n");
 	else printf("\n%d개의 데이터 검색!\n", scnt);
 	printf("\n");
@@ -139,37 +139,34 @@ void searchPrice(Drink *p, int count){
 	printf("\n검색 가격대 선택\n\n0. 1000원 이하\n1. 1000원 대\n2. 2000원 대\n3. 3000원 이상\n");
        scanf("%d", &search);
        for(int i=0; i<count; i++){
-             if(p->price==-1 || p->type==-1) continue;
+             if(p[i].price==-1 || p[i].type==-1) continue;
              if(search==0){
-                    if(p->price<1000){
+                    if(p[i].price<1000){
                            printf("%-2d ", i+1);
-                           readDrink(*p);
-                           printf("\n");
+                           readDrink(p[i]);
                            scnt++;
                     }
              }else if(search==1){
-		    if(p->price >= 1000 && p->price<2000){ 
+		    if(p[i].price >= 1000 && p[i].price<2000){ 
 			   printf("%-2d ", i+1);
-                           readDrink(*p);
-                           printf("\n");
+                           readDrink(p[i]);
                            scnt++;
                     }
              }else if(search==2){
-		    if(p->price>=2000 && p->price<3000){ 
+		    if(p[i].price>=2000 && p[i].price<3000){ 
 			   printf("%-2d ", i+1);
-                           readDrink(*p);
-                           printf("\n");
+                           readDrink(p[i]);
                            scnt++;
                     }
              }else if(search==3){
-                    if(p->price>=3000){
+                    if(p[i].price>=3000){
                            printf("%-2d ", i+1);
-                           readDrink(*p);
-                           printf("\n");
+                           readDrink(p[i]);
                            scnt++;
 		} 
 	     }
 	}
+       	printf("\n");
 	if(scnt==0) printf("\n=>검색된 데이터 없음!\n");
 	else printf("\n=> %d개의 데이터 검색!\n", scnt);
 }; // 음료 가격 검색
@@ -182,14 +179,14 @@ void searchType(Drink *p, int count){
         scanf("%d", &search);
 
         for(int i=0; i<count; i++){
-                if(p->price==-1 || p->type ==-1) continue;
-                if(p->type==search){
+                if(p[i].price==-1 || p[i].type ==-1) continue;
+                if(p[i].type==search){
                         printf("%-2d", i+1);
-                        readDrink(*p);
-                        printf("\n");
+                        readDrink(p[i]);
                         scnt++;
                 }
 	}
+	printf("\n");
         if(scnt==0) printf("\n=> 검색된 데이터 없음!\n");
         else printf("\n%d개의 데이터 검색!\n", scnt);
         printf("\n");
