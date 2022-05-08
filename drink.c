@@ -69,15 +69,11 @@ void listDrink(Drink *p, int count){
 	for(int i=0; i<count; i++){
 		if(p->price == -1 || p->type == -1) continue;
 		printf("%-2d ", i+1);
-		readDrink(*p);
-		printf("\n");
+		readDrink(p[i]);
 	}
 }; // 전체 등록된 음료 리스트 출력
 
 int updateDrink(Drink *p){
-	int num;
-	printf("수정할 음료의 번호는? "); 
-	scanf("%d", &num);
 	printf("음료명 : ");
 	getchar();
 	scanf("%[^\n]", p->name);
