@@ -1,7 +1,6 @@
 ![DVM](https://user-images.githubusercontent.com/86994067/166147082-9f983d8c-99c1-42c1-a338-458a8652729d.png)
 
 세상의 맛있는 음료를 제공해주는 곳!
-
 목이 마르신가요?
 목마르고 원하는 음료를 즐기고 싶을 땐 **Drink VM**
 
